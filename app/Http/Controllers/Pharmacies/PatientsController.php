@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Pharmacies;
 
+use App\General\Patients\PatientRepository;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -13,12 +14,19 @@ class PatientsController extends Controller
 {
 
     /**
-     * PatientsController constructor.
+     * @var PatientRepository
      */
-    public function __construct()
+    private $patientRepository;
+
+    /**
+     * PatientsController constructor.
+     * @param PatientRepository $patientRepository
+     */
+    public function __construct(PatientRepository $patientRepository)
     {
         $this->middleware('auth');
         $this->middleware('role:pharmacist');
+        $this->patientRepository = $patientRepository;
     }
 
     /**
@@ -70,7 +78,12 @@ class PatientsController extends Controller
      */
     public function show($id)
     {
-        //
+        $pharmacyId = auth()->user()->pharmacy->id;
+
+        $patient = $this->patientRepository->getPharmacyPatient($pharmacyId, $id);
+        $diaryEntries = $patient->diary_entries()->orderBy('created_at', 'desc')->paginate(10);
+
+        return view('pharmacies.patients.show', compact('patient', 'diaryEntries'));
     }
 
     /**

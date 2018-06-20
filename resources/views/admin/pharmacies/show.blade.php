@@ -88,10 +88,10 @@
                     </div>
                 @endif
 
-                    <a href="/admin/pharmacies/{{ $pharmacy->id }}/pharmacists/create" class="btn btn-primary">
-                        <i class="fa fa-plus"></i>
-                        Add pharmacist
-                    </a>
+                <a href="/admin/pharmacies/{{ $pharmacy->id }}/pharmacists/create" class="btn btn-primary">
+                    <i class="fa fa-plus"></i>
+                    Add pharmacist
+                </a>
 
             </div>
             {{-- End Pharmacists tab--}}

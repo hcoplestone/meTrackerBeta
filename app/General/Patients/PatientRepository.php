@@ -25,5 +25,17 @@ class PatientRepository {
     {
         return User::role('patient')->where('pharmacy_id', $pharmacyId)->orderBy('created_at', 'desc')->paginate($limit);
     }
-    
+
+    /**
+     * Gets a pharmacies patient by user id
+     *
+     * @param $pharmacyId
+     * @param $patientId
+     * @return mixed
+     */
+    public function getPharmacyPatient($pharmacyId, $patientId)
+    {
+        return User::role('patient')->where('pharmacy_id', $pharmacyId)->where('id', $patientId)->firstOrFail();
+    }
+
 }

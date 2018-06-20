@@ -12,4 +12,27 @@ class DiaryEntry extends Model
     const MOOD_CRISIS = 3;
 
     protected $guarded = [];
+
+    /**
+     * Returns a human readable description of the diary entry's mood
+     *
+     * @return string
+     */
+    public function getHumanMood()
+    {
+        switch ($this->mood) {
+            case self::MOOD_HAPPY:
+                return 'happy';
+                break;
+            case self::MOOD_SENSITIVE:
+                return 'sensitive';
+                break;
+            case self::MOOD_SAD:
+                return 'sad';
+                break;
+            case self::MOOD_CRISIS:
+                return 'crisis';
+                break;
+        }
+    }
 }

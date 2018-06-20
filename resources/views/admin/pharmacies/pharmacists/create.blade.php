@@ -38,7 +38,7 @@
 
                 @endcomponent
 
-                <input type="submit" class="btn btn-primary" value="{{ __('Save') }}"></input>
+                <input type="submit" class="btn btn-primary mb-20" value="{{ __('Save') }}"></input>
             </form>
 
         </div>

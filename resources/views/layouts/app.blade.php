@@ -32,7 +32,7 @@
 
         @yield('content')
 
-        <footer id="page-footer" class="bg-white opacity-0 mt-20" style="opacity: 1;">
+        <footer id="page-footer" class="bg-white opacity-0" style="opacity: 1;">
             <div class="content py-20 font-size-xs clearfix">
                 <div class="float-right">
                     Sponsored with <i class="fa fa-heart text-pulse"></i> by <a class="font-w600" href="https://www.startupdiscounts.co.uk" target="_blank">Startup Discounts Ltd</a>

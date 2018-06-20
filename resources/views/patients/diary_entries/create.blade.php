@@ -47,28 +47,28 @@
                 {{-- Mood tab --}}
                 <div class="tab-pane fade show active" id="mood" role="tabpanel">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="mood" id="moodRadios0" value="0" required>
+                        <input class="form-check-input" type="radio" name="mood" id="moodRadios0" value="1" required>
                         <label class="form-check-label" for="moodRadios0">
                             Happy
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="mood" id="moodRadios1" value="1">
+                        <input class="form-check-input" type="radio" name="mood" id="moodRadios1" value="2">
                         <label class="form-check-label" for="moodRadios1">
                             Sensitive
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="mood" id="moodRadios2" value="2">
+                        <input class="form-check-input" type="radio" name="mood" id="moodRadios2" value="3">
                         <label class="form-check-label" for="moodRadios2">
                             Sad
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="mood" id="moodRadios3" value="3">
+                        <input class="form-check-input" type="radio" name="mood" id="moodRadios3" value="4">
                         <label class="form-check-label" for="moodRadios3">
                             Crisis
                         </label>
@@ -79,28 +79,28 @@
                 {{-- Sleep tab--}}
                 <div class="tab-pane fade show" id="sleep" role="tabpanel">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="sleep" id="sleepRadios0" value="0">
+                        <input class="form-check-input" type="radio" name="sleep" id="sleepRadios0" value="1">
                         <label class="form-check-label" for="sleepRadios0">
                             0 to 3 hours
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="sleep" id="sleepRadios1" value="1">
+                        <input class="form-check-input" type="radio" name="sleep" id="sleepRadios1" value="2">
                         <label class="form-check-label" for="sleepRadios1">
                             3 to 6 hours
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="sleep" id="sleepRadios2" value="2">
+                        <input class="form-check-input" type="radio" name="sleep" id="sleepRadios2" value="3">
                         <label class="form-check-label" for="sleepRadios2">
                             6 to 9 hours
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="sleep" id="sleepRadios3" value="3">
+                        <input class="form-check-input" type="radio" name="sleep" id="sleepRadios3" value="4">
                         <label class="form-check-label" for="sleepRadios3">
                             9 hours or more
                         </label>
@@ -111,28 +111,28 @@
                 {{-- Exercise tab --}}
                 <div class="tab-pane fade show" id="exercise" role="tabpanel">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exercise" id="exerciseRadios0" value="0">
+                        <input class="form-check-input" type="radio" name="exercise" id="exerciseRadios0" value="1">
                         <label class="form-check-label" for="exerciseRadios0">
                             None
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exercise" id="exerciseRadios1" value="1">
+                        <input class="form-check-input" type="radio" name="exercise" id="exerciseRadios1" value="2">
                         <label class="form-check-label" for="exerciseRadios1">
                             30 minutes or less
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exercise" id="exerciseRadios2" value="2">
+                        <input class="form-check-input" type="radio" name="exercise" id="exerciseRadios2" value="3">
                         <label class="form-check-label" for="exerciseRadios2">
                             30 minutes to 1 hour
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="exercise" id="exerciseRadios3" value="3">
+                        <input class="form-check-input" type="radio" name="exercise" id="exerciseRadios3" value="4">
                         <label class="form-check-label" for="exerciseRadios3">
                             1 hour or more
                         </label>
@@ -143,28 +143,28 @@
                 {{-- Meditation tab --}}
                 <div class="tab-pane fade show" id="meditation" role="tabpanel">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="meditation" id="meditationRadios0" value="0">
+                        <input class="form-check-input" type="radio" name="meditation" id="meditationRadios0" value="1">
                         <label class="form-check-label" for="meditationRadios0">
                             None
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="meditation" id="meditationRadios1" value="1">
+                        <input class="form-check-input" type="radio" name="meditation" id="meditationRadios1" value="2">
                         <label class="form-check-label" for="meditationRadios1">
                             5 minutes or less
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="meditation" id="meditationRadios2" value="2">
+                        <input class="form-check-input" type="radio" name="meditation" id="meditationRadios2" value="3">
                         <label class="form-check-label" for="meditationRadios2">
                             5 to 30 minutes
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="meditation" id="meditationRadios3" value="3">
+                        <input class="form-check-input" type="radio" name="meditation" id="meditationRadios3" value="4">
                         <label class="form-check-label" for="meditationRadios3">
                             30 minutes or more
                         </label>
@@ -175,28 +175,28 @@
                 {{-- Alcohol tab--}}
                 <div class="tab-pane fade show" id="alcohol" role="tabpanel">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="alcohol" id="alcoholRadios0" value="0">
+                        <input class="form-check-input" type="radio" name="alcohol" id="alcoholRadios0" value="1">
                         <label class="form-check-label" for="alcoholRadios0">
                             None
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="alcohol" id="alcoholRadios1" value="1">
+                        <input class="form-check-input" type="radio" name="alcohol" id="alcoholRadios1" value="2">
                         <label class="form-check-label" for="alcoholRadios1">
                             1 unit
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="alcohol" id="alcoholRadios2" value="2">
+                        <input class="form-check-input" type="radio" name="alcohol" id="alcoholRadios2" value="3">
                         <label class="form-check-label" for="alcoholRadios2">
                             2 units
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="alcohol" id="alcoholRadios3" value="3">
+                        <input class="form-check-input" type="radio" name="alcohol" id="alcoholRadios3" value="4">
                         <label class="form-check-label" for="alcoholRadios3">
                             3 units or more
                         </label>
@@ -207,28 +207,28 @@
                 {{-- Energy Tab --}}
                 <div class="tab-pane fade show" id="energy" role="tabpanel">
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="energy" id="energyRadios0" value="0">
+                        <input class="form-check-input" type="radio" name="energy" id="energyRadios0" value="1">
                         <label class="form-check-label" for="energyRadios0">
                             Energised
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="energy" id="energyRadios1" value="1">
+                        <input class="form-check-input" type="radio" name="energy" id="energyRadios1" value="2">
                         <label class="form-check-label" for="energyRadios1">
                             Good
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="energy" id="energyRadios2" value="2">
+                        <input class="form-check-input" type="radio" name="energy" id="energyRadios2" value="3">
                         <label class="form-check-label" for="energyRadios2">
                             Low
                         </label>
                     </div>
 
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="energy" id="energyRadios3" value="3">
+                        <input class="form-check-input" type="radio" name="energy" id="energyRadios3" value="4">
                         <label class="form-check-label" for="energyRadios3">
                             Exhausted
                         </label>

@@ -12,7 +12,7 @@ class PatientRepository {
      */
     public function getPatientsByPharmacyId($pharmacyId)
     {
-        return User::role('patient')->where('pharmacy_id', $pharmacyId)->get();
+        return User::role('patient')->where('pharmacy_id', $pharmacyId)->orderBy('created_at', 'desc')->get();
     }
 
     /**
@@ -23,7 +23,7 @@ class PatientRepository {
      */
     public function paginatePatientsByPharmacyId($pharmacyId, $limit = 10)
     {
-        return User::role('patient')->where('pharmacy_id', $pharmacyId)->paginate($limit);
+        return User::role('patient')->where('pharmacy_id', $pharmacyId)->orderBy('created_at', 'desc')->paginate($limit);
     }
     
 }

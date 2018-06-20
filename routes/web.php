@@ -49,3 +49,7 @@ Route::resource('/admin/pharmacies.pharmacists', 'Admin\Pharmacies\PharmaciesPha
 // Pharmacist routes
 Route::get('/pharmacist-dashboard', 'PharmacistDashboardController@index')->name('pharmacist-dashboard');
 Route::resource('/pharmacies/patients', 'Pharmacies\PatientsController');
+
+// Patient routes
+Route::get('/patient-dashboard', 'PatientDashboardController@index')->name('patient-dashboard');
+Route::resource('/patients/diary-entries', 'Patients\DiaryEntriesController');

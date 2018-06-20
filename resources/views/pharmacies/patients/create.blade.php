@@ -7,25 +7,22 @@
 
         <!-- Title -->
         @component('components.title')
-        Add New Pharmacist
-        @slot('secondary')
-           <h2 class="h4 text-muted font-w300 mb-0">{{ $pharmacy->name }}</h2>
-        @endslot
-        @endcomponent
-        <!-- END Title -->
+        Add New Patient
+    @endcomponent
+    <!-- END Title -->
 
         <!-- Page Content -->
         <div class="content">
 
-            @component('components.back-to-link', ['name' => 'pharmacy', 'link' => '/admin/pharmacies/' . $pharmacy->id])@endcomponent
+            @component('components.back-to-link', ['name' => 'dashboard', 'link' => '/pharmacist-dashboard'])@endcomponent
 
-            <form method="POST" action="{{ route('pharmacies.pharmacists.store', $pharmacy->id) }}" aria-label="{{ __('Pharmacists') }}">
+            <form method="POST" action="{{ route('patients.store') }}" aria-label="{{ __('Patients') }}">
                 @csrf
                 @component('components.tabs-container')
 
                 @slot('links')
                 <li class="nav-item">
-                    <a class="nav-link active" href="#">Pharmacist Credentials</a>
+                    <a class="nav-link active" href="#">Patient Details</a>
                 </li>
 
                 @endslot

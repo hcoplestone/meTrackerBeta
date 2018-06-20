@@ -1,3 +1,4 @@
+@auth
 <!-- Sidebar -->
 <nav id="sidebar">
     <!-- Sidebar Scroll Container -->
@@ -63,6 +64,7 @@
     <!-- END Sidebar Scroll Container -->
 </nav>
 <!-- END Sidebar -->
+@endauth
 
 <!-- Header -->
 <header id="page-header">

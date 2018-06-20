@@ -1,24 +1,22 @@
 <?php
 
-namespace App\Http\Controllers\Pharmacies;
+namespace App\Http\Controllers\Patients;
 
-use App\User;
+use App\DiaryEntry;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Hash;
 use RealRashid\SweetAlert\Facades\Alert;
-use Spatie\Permission\Models\Role;
 
-class PatientsController extends Controller
+class DiaryEntriesController extends Controller
 {
 
     /**
-     * PatientsController constructor.
+     * DiaryEntriesController constructor.
      */
     public function __construct()
     {
         $this->middleware('auth');
-        $this->middleware('role:pharmacist');
+        $this->middleware('role:patient');
     }
 
     /**
@@ -28,7 +26,7 @@ class PatientsController extends Controller
      */
     public function create()
     {
-        return view('pharmacies.patients.create');
+        return view('patients.diary_entries.create');
     }
 
     /**
@@ -39,27 +37,13 @@ class PatientsController extends Controller
      */
     public function store(Request $request)
     {
-        $pharmacyId = auth()->user()->pharmacy->id;
+        $currentUser = auth()->user();
 
-        $request->validate([
-            'name'     => 'required|string|max:255',
-            'email'    => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed'
-        ]);
+        $diaryEntry = new DiaryEntry($request->all());
+        $currentUser->diary_entries()->save($diaryEntry);
 
-        $data = $request->all();
-        $patient = User::create([
-            'name'        => $data['name'],
-            'email'       => $data['email'],
-            'password'    => Hash::make($data['password']),
-            'pharmacy_id' => $pharmacyId
-        ]);
-
-        $patientRole = Role::where('name', 'patient')->firstOrFail();
-        $patient->assignRole($patientRole);
-
-        Alert::success('Patient added successfully', '');
-        return redirect('/pharmacist-dashboard');
+        Alert::success('Diary entry added successfully', '');
+        return redirect('/patient-dashboard');
     }
 
     /**

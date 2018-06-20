@@ -35,4 +35,12 @@ class User extends Authenticatable
     {
         return $this->belongsTo('App\Pharmacy');
     }
+
+    /**
+     * Gets the diary entries associated with a user (patients)
+     */
+    public function diary_entries()
+    {
+        return $this->hasMany('App\DiaryEntry');
+    }
 }

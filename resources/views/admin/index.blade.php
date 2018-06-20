@@ -25,7 +25,7 @@
             </li>
             <div class="nav-item">
                 <a href="/admin/pharmacies/create" class="nav-link">
-                    <i class="fa fa-plus mr-5"></i>
+                    <i class="fa fa-plus"></i>
                     Add Pharmacy
                 </a>
             </div>

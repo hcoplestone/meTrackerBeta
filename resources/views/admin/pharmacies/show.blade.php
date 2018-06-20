@@ -25,10 +25,6 @@
             <li class="nav-item">
                 <a class="nav-link active" href="#pharmacydetails">Pharmacy Details</a>
             </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="#pharmacists">Pharmacists</a>
-            </li>
             @endslot
 
             {{-- Start Pharmacy details tab --}}
@@ -49,50 +45,59 @@
                 </p>
             </div>
             {{-- End pharmacy details tab --}}
+            @endcomponent
+
+            @component('components.tabs-container', ['disabled' => true])
+
+            @slot('links')
+            <li class="nav-item">
+                <a class="nav-link active" href="#pharmacists">Pharmacists</a>
+            </li>
+            <li class="nav-item">
+                <a href="/admin/pharmacies/{{ $pharmacy->id }}/pharmacists/create" class="nav-link">
+                    <i class="fa fa-plus"></i>
+                    Add pharmacist
+                </a>
+            </li>
+            @endslot
 
             {{-- Start Pharmacists tab--}}
-            <div class="tab-pane fade" id="pharmacists" role="tabpanel">
+            <div class="tab-pane fade show active" id="pharmacists" role="tabpanel">
 
                 @if($pharmacists->count())
-                <table class="table table-striped table-borderless table-hover table-vcenter mb-20">
-                    <thead class="thead-light">
-                    <tr>
-                        <th class="d-none d-sm-table-cell text-center" style="width: 40px;">#</th>
-                        <th>Name</th>
-                        <th class="d-none d-sm-table-cell">Email</th>
-                        <th class="d-none d-lg-table-cell" style="width: 15%;">Access</th>
-                    </tr>
-                    </thead>
-                    <tbody>
-                    @foreach($pharmacists as $pharmacist)
+                    <table class="table table-striped table-borderless table-hover table-vcenter mb-20">
+                        <thead class="thead-light">
                         <tr>
-                            <td class="d-none d-sm-table-cell text-center">
-                                <span class="badge badge-pill badge-primary">{{ $pharmacist->id }}</span>
-                            </td>
-                            <td class="font-w600">
-                                {{ $pharmacist->name }}
-                            </td>
-                            <td class="d-none d-sm-table-cell">
-                                {{ $pharmacist->email }}
-                            </td>
-                            <td class="d-none d-lg-table-cell">
-                                <span class="badge badge-success">Active</span>
-                            </td>
+                            <th class="d-none d-sm-table-cell text-center" style="width: 40px;">#</th>
+                            <th>Name</th>
+                            <th class="d-none d-sm-table-cell">Email</th>
+                            <th class="d-none d-lg-table-cell" style="width: 15%;">Access</th>
                         </tr>
-                    @endforeach
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                        @foreach($pharmacists as $pharmacist)
+                            <tr>
+                                <td class="d-none d-sm-table-cell text-center">
+                                    <span class="badge badge-pill badge-primary">{{ $pharmacist->id }}</span>
+                                </td>
+                                <td class="font-w600">
+                                    {{ $pharmacist->name }}
+                                </td>
+                                <td class="d-none d-sm-table-cell">
+                                    {{ $pharmacist->email }}
+                                </td>
+                                <td class="d-none d-lg-table-cell">
+                                    <span class="badge badge-success">Active</span>
+                                </td>
+                            </tr>
+                        @endforeach
+                        </tbody>
+                    </table>
                 @else
                     <div class="alert alert-danger">
                         No pharmacists have been added to this pharmacy yet...
                     </div>
                 @endif
-
-                <a href="/admin/pharmacies/{{ $pharmacy->id }}/pharmacists/create" class="btn btn-primary">
-                    <i class="fa fa-plus"></i>
-                    Add pharmacist
-                </a>
-
             </div>
             {{-- End Pharmacists tab--}}
             @endcomponent

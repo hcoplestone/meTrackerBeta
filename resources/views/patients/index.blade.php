@@ -35,7 +35,10 @@
             <div class="tab-pane fade show active" id="diaryentries" role="tabpanel">
 
                 @if($diaryEntries->total())
-                    @foreach($diaryEntries as $diaryEntry)
+
+                @include('partials.display._diary-entry-table', ['diaryEntries' => $diaryEntries, 'linkPrefix' => '/patients/diary-entries'])
+
+                @foreach($diaryEntries as $diaryEntry)
                         <div class="well">
                             diary entry
                         </div>

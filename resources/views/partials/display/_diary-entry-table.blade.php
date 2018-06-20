@@ -18,7 +18,7 @@
             <td class="text-center">
                 <div class="btn-group">
                     <a href="{{ $linkPrefix }}/{{ $entry->id }}">
-                        <button type="button" class="btn btn-sm btn-secondary js-tooltip-enabled" data-toggle="tooltip" title="" data-original-title="Edit">
+                        <button type="button" class="btn btn-sm btn-secondary js-tooltip-enabled" data-toggle="tooltip" title="" data-original-title="View">
                             <i class="fa fa-eye"></i>
                         </button>
                     </a>

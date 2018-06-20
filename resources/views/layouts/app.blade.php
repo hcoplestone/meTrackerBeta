@@ -35,7 +35,7 @@
         <footer id="page-footer" class="bg-white opacity-0" style="opacity: 1;">
             <div class="content py-20 font-size-xs clearfix">
                 <div class="float-right">
-                    Sponsored with <i class="fa fa-heart text-pulse"></i> by <a class="font-w600" href="https://www.startupdiscounts.co.uk" target="_blank">Startup Discounts Ltd</a>
+                    Built with <i class="fa fa-heart text-pulse"></i> by <a class="font-w600" href="https://www.startupdiscounts.co.uk" target="_blank">Harvey C</a>
                 </div>
                 <div class="float-left">
                     &copy; meTracker <span class="js-year-copy">2018</span>. All rights reserved.

@@ -22,7 +22,7 @@ class PatientDashboardController extends Controller
     {
         $currentUser = auth()->user();
         $pharmacy = $currentUser->pharmacy;
-        $diaryEntries = $currentUser->diary_entries()->orderBy('created_at', 'desc')->paginate(15);
+        $diaryEntries = $currentUser->diary_entries()->orderBy('created_at', 'desc')->paginate(10);
 
         return view('patients.index', compact('pharmacy', 'diaryEntries'));
     }

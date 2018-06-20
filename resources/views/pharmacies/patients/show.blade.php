@@ -66,14 +66,14 @@
                         @foreach($diaryEntries as $entry)
                             <tr>
                                 <td class="font-w600">
-                                    {{ $entry->created_at }}
+                                    {{ $entry->created_at->format('F j, Y, g:i a') }}
                                 </td>
                                 <td class="d-none d-sm-table-cell">
                                     {{ ucfirst($entry->getHumanMood()) }}
                                 </td>
                                 <td class="text-center">
                                     <div class="btn-group">
-                                        <a>
+                                        <a href="/pharmacies/patients/{{ $patient->id }}/diary-entries/{{ $entry->id }}">
                                             <button type="button" class="btn btn-sm btn-secondary js-tooltip-enabled" data-toggle="tooltip" title="" data-original-title="Edit">
                                                 <i class="fa fa-eye"></i>
                                             </button>

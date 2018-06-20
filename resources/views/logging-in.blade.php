@@ -8,16 +8,18 @@
     <title>{{ config('app.name', 'meTracker') }}</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet" type="text/css">
+    {{--<link href="https://fonts.googleapis.com/css?family=Montserrat:300" rel="stylesheet" type="text/css">--}}
+
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 
     <!-- Styles -->
     <style>
         html, body {
-            color: #636b6f;
-            font-family: 'Montserrat', sans-serif;
+            color: #575757;
             font-weight: 300;
             height: 100vh;
             margin: 0;
+            background: #fff !important;
         }
 
         .full-height {
@@ -48,7 +50,7 @@
         }
 
         .links > a {
-            color: #636b6f;
+            color: #171717;
             padding: 0 25px;
             font-size: 12px;
             font-weight: 600;
@@ -122,7 +124,7 @@
             width: 27px;
             height: 27px;
             position: relative;
-            margin-right: 8px;
+            margin-right: 10px;
         }
         .sk-circle .sk-child {
             width: 100%;
@@ -137,7 +139,7 @@
             margin: 0 auto;
             width: 15%;
             height: 15%;
-            background-color: #636b6e;
+            background-color: #575757;
             border-radius: 100%;
             -webkit-animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;
             animation: sk-circleBounceDelay 1.2s infinite ease-in-out both;

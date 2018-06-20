@@ -82,8 +82,9 @@ class PatientsController extends Controller
 
         $patient = $this->patientRepository->getPharmacyPatient($pharmacyId, $id);
         $diaryEntries = $patient->diary_entries()->orderBy('created_at', 'desc')->paginate(10);
+        $analyticsData = $patient->diary_entries()->select('id', 'mood', 'sleep', 'created_at')->get();
 
-        return view('pharmacies.patients.show', compact('patient', 'diaryEntries'));
+        return view('pharmacies.patients.show', compact('patient', 'diaryEntries', 'analyticsData'));
     }
 
     /**

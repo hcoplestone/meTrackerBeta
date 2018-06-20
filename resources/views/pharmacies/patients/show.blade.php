@@ -46,12 +46,18 @@
 
             @slot('links')
             <li class="nav-item">
-                <a class="nav-link active" href="#diaryentries">Diary Entries</a>
+                <a class="nav-link active" href="#diaryentriestab">Diary Entries</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#moodtrackertab">Mood Tracker</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#sleeptrackertab">Sleep Tracker</a>
             </li>
             @endslot
 
             {{-- Start diary entries tab--}}
-            <div class="tab-pane fade show active" id="diaryentries" role="tabpanel">
+            <div class="tab-pane fade show active" id="diaryentriestab" role="tabpanel">
 
                 @if($diaryEntries->count())
                     @include('partials.display._diary-entry-table', ['diaryEntries' => $diaryEntries, 'linkPrefix' => '/pharmacies/patients/' . $patient->id . '/diary-entries'])
@@ -65,6 +71,18 @@
 
             </div>
             {{-- End diary entries tab--}}
+
+            {{-- Start mood tracker tab--}}
+            <div class="tab-pane fade" id="moodtrackertab" role="tabpanel">
+                <mood-tracker-graph :mood-data="{{ json_encode($analyticsData) }}"></mood-tracker-graph>
+            </div>
+            {{-- End mood tracker tab--}}
+
+            {{-- Start sleep tracker tab--}}
+            <div class="tab-pane fade" id="sleeptrackertab" role="tabpanel">
+                <sleep-tracker-graph :sleep-data="{{ json_encode($analyticsData) }}"></sleep-tracker-graph>
+            </div>
+            {{-- End sleep tracker tab--}}
             @endcomponent
 
         </div>

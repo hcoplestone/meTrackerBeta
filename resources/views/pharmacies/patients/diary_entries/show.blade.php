@@ -23,7 +23,7 @@
 
             @slot('links')
             <li class="nav-item">
-                <a class="nav-link active" href="#diaryentries">Entry Details</a>
+                <a class="nav-link active" href="#diaryentry">Entry Details</a>
             </li>
             @endslot
 
@@ -38,6 +38,7 @@
                 @include('partials.display._diary-entry', compact('diaryEntry'))
             </div>
             {{-- End diary entries tab--}}
+
             @endcomponent
 
         </div>

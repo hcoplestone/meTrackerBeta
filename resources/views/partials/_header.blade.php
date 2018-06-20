@@ -18,10 +18,8 @@
 
                     <!-- Logo -->
                     <div class="content-header-item">
-                        <a class="link-effect font-w700" href="index.html">
-                            <i class="si si-fire text-primary"></i>
-                            <span class="font-size-xl text-dual-primary-dark">code</span><span
-                                    class="font-size-xl text-primary">base</span>
+                        <a href="/">
+                            <img src="/img/logo.png" width="120" alt="">
                         </a>
                     </div>
                     <!-- END Logo -->
@@ -37,24 +35,7 @@
                 If you would like to use the same navigation in both mobiles and desktops, you can use exactly the same markup inside sidebar and header navigation ul lists
                 -->
                 <ul class="nav-main">
-                    <li>
-                        <a href=""><i class="si si-cup"></i>Dashboard</a>
-                    </li>
-                    <li>
-                        <a href=""><i class="si si-rocket"></i>Features</a>
-                    </li>
-                    <li>
-                        <a href=""><i class="si si-wallet"></i>Pricing</a>
-                    </li>
-                    <li>
-                        <a href=""><i class="si si-grid"></i>Plan</a>
-                    </li>
-                    <li>
-                        <a href=""><i class="si si-user"></i>Account</a>
-                    </li>
-                    <li>
-                        <a href=""><i class="si si-logout"></i>Logout</a>
-                    </li>
+                    @include('partials._main-nav-links')
                 </ul>
             </div>
             <!-- END Side Main Navigation -->
@@ -100,16 +81,7 @@
                         <i class="si si-layers"></i> Menu
                     </a>
                     <ul>
-                        <li>
-                            <a href="{{ route('logout') }}"
-                               onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();"><i class="si si-logout"></i>Logout</a>
-
-                            <form id="logout-form" action="{{ route('logout') }}" method="POST"
-                                  style="display: none;">
-                                @csrf
-                            </form>
-                        </li>
+                        @include('partials._main-nav-links')
                     </ul>
                 </li>
             </ul>
